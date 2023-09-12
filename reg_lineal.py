@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Cargar los datos que se van a utilizar
-df = pd.read_csv('WorldHappinessReport2015.csv')
+df = pd.read_csv('WorldHappinessReport2015_16_18.csv')
 # Se les hace un shuffle a los datos 
 df = df.sample(frac = 1, random_state = 9).reset_index()
 # Se divide el dataframe en variables independientes y en variables dependientes (aquella que se va a predecir) 
@@ -14,10 +14,10 @@ df_y = df[["Happiness Score"]]
 df_x['Constant'] = np.ones(len(df))
 
 # Se divien los dataframes en datos para entrenamiento (90%) y datos para pruebas (10%)
-x_train = df_x[:144]
-y_train = df_y[:144]
-x_test = df_x[144:]
-y_test = df_y[144:]
+x_train = df_x[:285]
+y_train = df_y[:285]
+x_test = df_x[285:]
+y_test = df_y[285:]
 
 def hyp(params, samples):
   # Función que nos ayuda a sacar la hipótesis, evaluando hyp con los parámetros actuales y las variables independientes almacenadas en x_train
