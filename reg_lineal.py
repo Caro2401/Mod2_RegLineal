@@ -64,7 +64,7 @@ while True:  # Corre la función de GD hasta haber completado 5 epocas
 	params = GD(params, samples, y, alfa)
 	show_errors(params, samples, y)  # Muestra el error
 	epochs = epochs + 1
-	if(epochs == 5): 
+	if(epochs == 6): 
 		print ("samples:")
 		print(samples)
 		print ("final params:")
